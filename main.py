@@ -19,8 +19,8 @@ def create_large_text_file(path: str, size_bytes: int) -> None:
 
 def main():
     print("Hello from large-file-repo!")
-    target = "my_large_text_file.txt"
-    target_size = 100 * 1024  # 100 KB = 102400 bytes
+    target = "my_large_text_file2.txt"
+    target_size = 1000 * 1024  # 1000 KB = 1024000 bytes
     create_large_text_file(target, target_size)
     print(f"Created '{target}' with size {target_size} bytes.")
 
