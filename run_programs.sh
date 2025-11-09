@@ -5,7 +5,15 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 if command -v python3 >/dev/null 2>&1; then
+    # Run hello_world.py
     python3 hello_world.py
+
+    # Run branch3.py if it exists
+    if [ -f "branch3.py" ]; then
+        python3 branch3.py
+    else
+        echo "branch3.py not found, skipping." >&2
+    fi
 else
     echo "python3 not found in PATH. Please install Python 3 or adjust the script." >&2
     exit 1
